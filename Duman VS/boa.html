@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Боа Хэнкок — One Piece</title>
+  <link rel="stylesheet" href="styles/boa.css" />
+
+  <style>
+    @keyframes charmStrike {
+      0% { transform: scale(1); opacity: 0; filter: blur(3px); }
+      100% { transform: scale(1); opacity: 1; filter: none; }
+    }
+    body { animation: charmStrike 1s ease-out forwards; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Боа Хэнкок</h1>
+    <p>Императрица Амазон Лили 🌹 Богиня любви и греха</p>
+  </header>
+
+  <main>
+    <section class="profile">
+      <img src="https://i.pinimg.com/736x/13/00/6e/13006e8fc4ff5334a2906341202c84ff.jpg" alt="Боа Хэнкок" />
+      <div class="info">
+        <h2>Основная информация</h2>
+        <ul>
+          <li><strong>Полное имя:</strong> Боа Хэнкок</li>
+          <li><strong>Прозвище:</strong> Богиня любви</li>
+          <li><strong>День рождения:</strong> 2 февраля 🎉</li>
+          <li><strong>Возраст:</strong> 31 год</li>
+          <li><strong>Рост:</strong> 191 см</li>
+          <li><strong>Мечта:</strong> Быть рядом и защитить Луффи</li>
+          <li><strong>Фрукт:</strong> Меро Меро но Ми — Turning people by love</li>
+          <li><strong>Роль:</strong> Императрица Амазон Лили, бывший Ситибукай</li>
+          <li><strong>Озвучка:</strong> Kotono Mitsuishi 🎙️</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="abilities">
+      <h2>Способности</h2>
+      <p>Богиня Хэнкок обладает дьявольским фруктом любви <strong>Меро Меро но Ми</strong>, превращающим в камень любого, кто ощущает к ней *влечение*. Вдобавок мастерски владеет дзюдо и хаки.</p>
+      <ul>
+        <li>💖 <strong>Лепрекон-камень</strong> — превращает в камень влюблённых</li>
+        <li>🪄 <strong>Божественный шарм</strong> — даже жест может обратить цель в камень</li>
+        <li>🛡 <strong>Хаки вооружения и завоевателя</strong> — впечатляющая защита и дух</li>
+        <li>🧭 <strong>Боевые методы</strong> — дзюдо, гибкость и сила</li>
+      </ul>
+    </section>
+
+    <section class="story">
+      <h2>История</h2>
+      <p>Императрица Амазон Лили и бывший Ситибукай. Влюбилось в Луффи после его спасения Амазонок. Обработала себя рассудком и стала защищать тех, кого любит, даже людей под знамёнами Луффи.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>🌹 Богиня любви и силы | © 2025</p>
+  </footer>
+
+  <button id="theme-toggle">🌙 Тёмная тема</button>
+  <button id="back-button">🔙 Назад</button>
+  
+  <script>
+    const themeBtn = document.getElementById("theme-toggle"), body = document.body;
+    function setTheme(theme){ body.className = theme; localStorage.setItem('theme', theme); themeBtn.textContent = theme==='dark-mode'?'☀️ Светлая тему':'🌙 Тёмная тема'; }
+    themeBtn.addEventListener('click', ()=>setTheme(body.className==='dark-mode'?'light-mode':'dark-mode'));
+    setTheme(localStorage.getItem('theme')||'light-mode');
+    document.getElementById('back-button').addEventListener('click', ()=>window.location.href='index.html');
+  </script>
+
+</body>
+</html>

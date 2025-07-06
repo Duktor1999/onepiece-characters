@@ -1,0 +1,284 @@
+body {
+    font-family: 'Permanent Marker', cursive;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #000;
+    padding-top: 60px; /* отступ под меню */
+}
+
+h1 {
+    font-size: 48px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid black;
+    display: inline-block;
+    padding: 10px;
+}
+
+#OnePiece {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.character-card {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: -5px 5px 0px black, -10px 10px 0px black;
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid black;
+    position: relative;
+
+    /* Анимация появления */
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+
+.character-card img {
+    width: 100%;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.character-card h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.character-card p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.info-button {
+    display: inline-block;
+    background-color: #ff4500; 
+    color: white;
+    padding: 10px 20px;
+    border: 3px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16px;
+    box-shadow: -3px 3px 0px black;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+    background-color: #cc3700; 
+}
+
+/* 🌗 ТЁМНАЯ ТЕМА */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode .character-card {
+    background: #1e1e1e;
+    border-color: #fff;
+    box-shadow: -5px 5px 0px #333, -10px 10px 0px #333;
+}
+
+body.dark-mode .character-card img {
+    border-color: #fff;
+}
+
+body.dark-mode .info-button {
+    background-color: #555;
+    color: #fff;
+    border-color: #aaa;
+}
+
+body.dark-mode .info-button:hover {
+    background-color: #777;
+}
+
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #ff4500;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: -2px 2px 0px black;
+    z-index: 1000;
+}
+
+#theme-toggle:hover {
+    background-color: #cc3700;
+}
+
+/* 🧭 Меню */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    z-index: 999;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #ff4500;
+}
+
+/* 🔍 Поиск по имени */
+#search {
+    margin: 20px auto 10px;
+    padding: 10px;
+    font-size: 18px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: -2px 2px 0px black;
+}
+
+body.dark-mode #search {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #aaa;
+}
+
+#random-button {
+  background-color: #ff4500;
+  color: white;
+  border: 2px solid black;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: -2px 2px 0 black;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#random-button:hover {
+  background-color: #cc3700;
+  transform: scale(1.05);
+}
+
+#loader {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ff4500;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+#flash-effect {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2000;
+  transition: opacity 1s ease-in-out;
+}
+
+#sort-age {
+  background-color: #222;
+  color: #fff;
+  border: 2px solid #ff4500;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: -2px 2px 0 black;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#sort-age:hover {
+  background-color: #ff4500;
+}
+
+body {
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #12223b, #1f3a93);
+  background-size: 400% 400%;
+  animation: oceanGradient 20s ease infinite;
+}
+
+@keyframes oceanGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#logo-icon {
+  height: 32px;
+  width: auto;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+#logo-icon:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.visit-site {
+  background-color: #ff4500;
+  color: white;
+  border: 2px solid black;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: -2px 2px 0 black;
+  transition: background-color 0.3s ease;
+}
+
+.visit-site:hover {
+  background-color: #cc3700;
+}
+
+
+
+
+
+
+

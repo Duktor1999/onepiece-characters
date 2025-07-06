@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to right, #1e1e1e, #0a0a0a);
+  color: #e0e0e0;
+  padding: 20px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #3b0a3b;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 0, 255, 0.3);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #eac3f5;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.profile img {
+  width: 300px;
+  border-radius: 10px;
+  border: 3px solid #a030a0;
+}
+
+.profile .info {
+  flex: 1;
+}
+
+.profile .info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #dda0dd;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.abilities, .story {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.abilities h2, .story h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffb3ff;
+}
+
+.abilities ul li, .story p {
+  font-size: 1.1rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #3b0a3b;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #eee;
+}
+
+#theme-toggle, #back-button {
+  position: fixed;
+  bottom: 20px;
+  padding: 10px 15px;
+  background: #7c2b7c;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: -2px 2px 0px black;
+  z-index: 1000;
+}
+
+#theme-toggle {
+  right: 20px;
+}
+
+#back-button {
+  left: 20px;
+}
+
+#theme-toggle:hover, #back-button:hover {
+  background-color: #561b56;
+}
+
+body.dark-mode {
+  background: #0a0a0a;
+  color: #ddd;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #220022;
+}
+
+body.dark-mode .profile,
+body.dark-mode .abilities,
+body.dark-mode .story {
+  background-color: #181818;
+}
