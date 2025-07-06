@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Эдвард Ньюгейт — One Piece</title>
+  <link rel="stylesheet" href="styles/whitebeard.css" />
+
+  <style>
+    @keyframes quakeImpact {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05) rotate(0.5deg); }
+    }
+
+    body {
+      animation: quakeImpact 1.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Эдвард "Белоус" Ньюгейт</h1>
+    <p>Самый сильный человек в мире ⚔️ Йонко и отец пиратской семьи</p>
+  </header>
+
+  <main>
+    <section class="profile">
+      <img src="https://m.media-amazon.com/images/I/61FuWM5LCrL._AC_UF1000,1000_QL80_.jpg" alt="Белоус" />
+      <div class="info">
+        <h2>Основная информация</h2>
+        <ul>
+          <li><strong>Полное имя:</strong> Эдвард Ньюгейт</li>
+          <li><strong>Прозвище:</strong> Белоус</li>
+          <li><strong>День рождения:</strong> 6 апреля 🎂</li>
+          <li><strong>Возраст при смерти:</strong> 72 года</li>
+          <li><strong>Рост:</strong> 666 см 😱</li>
+          <li><strong>Мечта:</strong> Иметь семью, а не сокровища</li>
+          <li><strong>Фрукт:</strong> Гура-Гура но Ми 🌊 — сила землетрясений</li>
+          <li><strong>Роль:</strong> Йонко, капитан Белоусовых пиратов</li>
+          <li><strong>Озвучка:</strong> Kinryu Arimoto 🎙️</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="abilities">
+      <h2>Сила и способности</h2>
+      <p>Белоус обладал одним из сильнейших дьявольских фруктов — <strong>Гура-Гура но Ми</strong>, позволяющим создавать землетрясения, цунами и сотрясать само пространство. Также владел всеми формами хаки и мог сразиться на равных с Гол Д. Роджером.</p>
+      <ul>
+        <li>🌊 <strong>Гура Гура</strong> — сотрясение воздуха, земли, воды</li>
+        <li>🛡 <strong>Хаки вооружения</strong> — непробиваемая защита и сила</li>
+        <li>👁 <strong>Хаки наблюдения</strong> — прогнозирование атак</li>
+        <li>🧭 <strong>Командирская сила</strong> — сплотил сотни союзников и сыновей</li>
+      </ul>
+    </section>
+
+    <section class="story">
+      <h2>История</h2>
+      <p>Эдвард Ньюгейт был не просто пиратом — он был отцом для многих. У него не было интереса к One Piece — он хотел семью. До самой смерти защищал своих сыновей и боролся как легенда. Его смерть потрясла весь мир и положила начало новой эре.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>🛡 Вечная память Белоусу — отцу моряков | © 2025</p>
+  </footer>
+
+  <button id="theme-toggle">🌙 Тёмная тема</button>
+  <button id="back-button">🔙 Назад</button>
+
+  <script>
+    const themeBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+    function setTheme(theme) {
+      body.className = theme;
+      localStorage.setItem("theme", theme);
+      themeBtn.textContent = theme === "dark-mode" ? "☀️ Светлая тема" : "🌙 Тёмная тема";
+    }
+    themeBtn.addEventListener("click", () => {
+      const newTheme = body.className === "dark-mode" ? "light-mode" : "dark-mode";
+      setTheme(newTheme);
+    });
+    setTheme(localStorage.getItem("theme") || "light-mode");
+
+    document.getElementById("back-button").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

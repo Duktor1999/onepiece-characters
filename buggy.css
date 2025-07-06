@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to right, #ffdddd, #ffeedd);
+  color: #222;
+  padding: 20px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
+  background-color: #fff8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+.profile img {
+  width: 300px;
+  border-radius: 10px;
+  border: 3px dashed #ff4444;
+}
+
+.profile .info {
+  flex: 1;
+}
+
+.profile .info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ff4444;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.abilities, .story {
+  background-color: #fff0f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(255, 100, 100, 0.1);
+}
+
+.abilities h2, .story h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #cc0000;
+}
+
+.abilities ul li, .story p {
+  font-size: 1.1rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+#theme-toggle, #back-button {
+  position: fixed;
+  bottom: 20px;
+  padding: 10px 15px;
+  background: #ff4444;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: -2px 2px 0px black;
+  z-index: 1000;
+}
+
+#theme-toggle {
+  right: 20px;
+}
+
+#back-button {
+  left: 20px;
+}
+
+#theme-toggle:hover, #back-button:hover {
+  background-color: #cc0000;
+}
+
+body.dark-mode {
+  background: #111;
+  color: #eee;
+}
+
+body.dark-mode .profile,
+body.dark-mode .abilities,
+body.dark-mode .story {
+  background-color: #222;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #880000;
+}

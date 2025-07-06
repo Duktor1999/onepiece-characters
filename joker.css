@@ -1,0 +1,83 @@
+*{ margin:0;padding:0;box-sizing:border-box; }
+@keyframes gradientShine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  font-family:'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #3a0000, #660033, #aa0055, #ff99cc);
+  background-size: 400% 400%;
+  animation: gradientShine 10s ease infinite;
+  color: #f2d7e8;
+  padding:20px;
+  transition: background .4s ease, color .4s ease;
+}
+
+header {
+  text-align:center;
+  padding:20px;
+  background:#aa0055;
+  border-radius:12px;
+  box-shadow:0 0 12px rgba(170,0,85,0.5);
+}
+header h1{ font-size:2.8rem; color:#fff; margin-bottom:10px; }
+header p{ font-size:1.2rem; color:#ffe6f2; }
+.profile {
+  display:flex;flex-wrap:wrap;gap:20px;
+  background:rgba(255,240,245,0.7);
+  padding:20px;margin-top:30px;border-radius:12px;
+  box-shadow:0 0 8px rgba(0,0,0,0.1);
+}
+.profile img {
+  width:300px;
+  border-radius:10px;
+  border:3px solid #cc3399;
+}
+.profile .info h2 {
+  font-size:1.8rem;
+  color:#cc6699;
+  margin-bottom:10px;
+}
+ul{ list-style:none; }
+ul li{ margin-bottom:8px; font-size:1.1rem; }
+.abilities, .story {
+  background:#ffe4f0;border-radius:12px;
+  padding:20px;margin-top:20px;
+  box-shadow:0 0 8px rgba(0,0,0,0.1);
+}
+.abilities h2, .story h2 {
+  font-size:1.8rem;
+  color:#cc0055;
+  margin-bottom:10px;
+}
+.abilities ul li, .story p{ font-size:1.1rem; }
+footer {
+  text-align:center;
+  margin-top:40px;
+  padding:20px;
+  background:#aa0055;
+  color:white;
+  border-radius:10px;
+}
+#theme-toggle,#back-button {
+  position:fixed;bottom:20px;padding:10px 15px;
+  background:#cc3399;color:white;border:2px solid #660033;
+  border-radius:5px;cursor:pointer;box-shadow:-2px 2px 0 black;
+  z-index:1000;font-size:14px;
+}
+#theme-toggle{ right:20px; }
+#back-button{ left:20px; }
+#theme-toggle:hover,#back-button:hover{ background:#aa0055; }
+body.dark-mode {
+  background:#220011;
+  color:#f7d7e8;
+}
+body.dark-mode header,body.dark-mode footer {
+  background:#440022;
+}
+body.dark-mode .profile, .abilities, .story {
+  background: rgba(0,0,0,0.3);
+}
+

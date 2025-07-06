@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Юстас Кид — One Piece</title>
+  <link rel="stylesheet" href="styles/kid.css" />
+  <style>
+    @keyframes metalAttract {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02) rotate(0.5deg); }
+    }
+    main {
+      animation: metalAttract 3s ease-in-out infinite alternate;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Юстас Кид</h1>
+    <p>Капитан «Железная Перчатка» ⚙️ Сила магнетизма и хаоса</p>
+  </header>
+
+  <main>
+    <section class="profile">
+      <img src="https://i.pinimg.com/736x/e1/99/cf/e199cf4eae0d973ccd890949a9ac4266.jpg" alt="Юстас Кид" />
+      <div class="info">
+        <h2>Основная информация</h2>
+        <ul>
+          <li><strong>Полное имя:</strong> Юстас Кид</li>
+          <li><strong>Прозвище:</strong> Железная Перчатка</li>
+          <li><strong>День рождения:</strong> 25 января 🎂</li>
+          <li><strong>Возраст:</strong> ~24 года</li>
+          <li><strong>Рост:</strong> 185 см</li>
+          <li><strong>Мечта:</strong> Добиться своей власти в новом мире</li>
+          <li><strong>Фрукт:</strong> Джики Джики но Ми — управление металлом</li>
+          <li><strong>Роль:</strong> Капитан пиратов Кида, Суперновый</li>
+          <li><strong>Озвучка:</strong> Shunsuke Takeuchi 🎙️</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="abilities">
+      <h2>Способности</h2>
+      <p>Кид использует <strong>Джики Джики но Ми</strong> для притяжения и управления металлом, создаёт оружие и броню прямо на ходу. Также владеет хаки вооружения и духа, способен создавать разрушительные атаки с взрывами железа.</p>
+      <ul>
+        <li>🧲 <strong>Металлизация</strong> — управление сталью, бронёй и оружием</li>
+        <li>💥 <strong>Металлический шторм</strong> — атака из авто‑металла</li>
+        <li>🛡 <strong>Хаки вооружения</strong> — усиление удара и пластичности тела</li>
+        <li>🚀 <strong>Каскадный удар</strong> — метая обломки как ракеты</li>
+      </ul>
+    </section>
+
+    <section class="story">
+      <h2>История</h2>
+      <p>Кид известен своей жёсткой волей и жестокостью, стремясь стать уникальным суперновым. Его путь пересёкся с Луффи, Козёнгин и Королём Флоридой. Он — грозный претендент на титул Императора.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>🧲 Железная сила и амбиции | © 2025</p>
+  </footer>
+
+  <button id="theme-toggle">🌙 Тёмная тема</button>
+  <button id="back-button">🔙 Назад</button>
+  
+  <script>
+    const themeBtn = document.getElementById('theme-toggle'),
+          body = document.body;
+    function setTheme(t){ body.className=t; localStorage.setItem('theme', t); themeBtn.textContent=t==='dark-mode'?'☀️ Светлая тема':'🌙 Тёмная тема'; }
+    themeBtn.addEventListener('click',()=>setTheme(body.className==='dark-mode'?'light-mode':'dark-mode'));
+    setTheme(localStorage.getItem('theme')||'light-mode');
+    document.getElementById('back-button').addEventListener('click',()=>window.location.href='index.html');
+  </script>
+</body>
+</html>

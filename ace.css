@@ -1,0 +1,58 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+body {
+  font-family:'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #4a2e11;
+  padding:20px;
+  transition:background .4s ease, color .4s ease;
+}
+header {
+  text-align:center;
+  padding:20px;
+  background:#ff7f50;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(255,127,80,0.5);
+}
+header h1{font-size:2.8rem;color:#fff8f0;margin-bottom:10px;}
+header p{font-size:1.2rem;color:#330a00;}
+.profile {
+  display:flex;flex-wrap:wrap;gap:20px;
+  background:rgba(255,255,255,0.8);
+  padding:20px;margin-top:30px;border-radius:12px;
+  box-shadow:0 0 8px rgba(0,0,0,0.1);
+}
+.profile img {
+  width:300px;border-radius:10px;
+  border:3px solid #ff4500;
+}
+.profile .info h2{font-size:1.8rem;color:#c05000;margin-bottom:10px;}
+ul{list-style:none;}
+ul li{margin-bottom:8px;font-size:1.1rem;}
+.abilities, .story {
+  background:#fff7f0;border-radius:12px;padding:20px;margin-top:20px;
+  box-shadow:0 0 8px rgba(0,0,0,0.1);
+}
+.abilities h2, .story h2{font-size:1.8rem;color:#e65100;margin-bottom:10px;}
+.abilities ul li, .story p{font-size:1.1rem;}
+footer {
+  text-align:center;
+  padding:15px;margin-top:40px;
+  background:#ff7f50;color:white;border-radius:10px;
+}
+#theme-toggle, #back-button {
+  position:fixed;bottom:20px;padding:10px 15px;
+  background:#e65100;color:white;border:2px solid #a04000;border-radius:5px;
+  box-shadow:-2px 2px 0 black;z-index:1000;font-size:14px;cursor:pointer;
+}
+#theme-toggle{right:20px;}
+#back-button{left:20px;}
+#theme-toggle:hover,#back-button:hover{background:#cc4d00;}
+body.dark-mode {
+  background:#2b1f16;color:#f5e9dc;
+}
+body.dark-mode header,body.dark-mode footer {
+  background:#663900;
+}
+body.dark-mode .profile, .abilities, .story {
+  background:rgba(0,0,0,0.2);
+}
